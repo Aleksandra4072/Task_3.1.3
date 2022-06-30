@@ -153,7 +153,7 @@
                                                                             <label for="editPassword"
                                                                                    class="col-form-label"><strong>Password</strong></label>
                                                                             <input class="form-control form-control-sm"
-                                                                                   th:value="null" id="editPassword"
+                                                                                   th:value="${user.getPassword()}" id="editPassword"
                                                                                    type="password"
                                                                                    name="password"
                                                                                    placeholder="password"/>
@@ -167,8 +167,7 @@
                                                                                 <option
                                                                                         th:each="role : ${roles}"
                                                                                         th:value="${role.getId()}"
-                                                                                        th:text="${role.getName()}"
-                                                                                >
+                                                                                        th:text="${role.getName()}">
                                                                                 </option>
                                                                             </select>
                                                                         </div>
