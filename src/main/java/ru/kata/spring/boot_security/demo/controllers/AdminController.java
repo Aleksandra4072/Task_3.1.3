@@ -12,6 +12,7 @@ import ru.kata.spring.boot_security.demo.services.UserService;
 
 import java.util.HashSet;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 @Controller
 public class AdminController {
@@ -64,7 +65,7 @@ public class AdminController {
                 roles.add(userService.findRoleById(i));
             }
         } else {
-            roles.add(userService.findRoleById(2L));
+            roles.add(userService.findRoleById(1L));
         }
         user.setRoles(roles);
         userService.saveAndFlush(user);
